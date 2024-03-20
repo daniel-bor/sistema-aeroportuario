@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('codigo');
             $table->timestamp('fecha_salida');
             $table->timestamp('fecha_llegada');
-            $table->decimal('precio_economico', 10, 2);
-            $table->decimal('precio_ejecutivo', 10, 2);
             $table->unsignedBigInteger('aerolinea_id');
             $table->unsignedBigInteger('avion_id');
             $table->unsignedBigInteger('tripulacion_id');
