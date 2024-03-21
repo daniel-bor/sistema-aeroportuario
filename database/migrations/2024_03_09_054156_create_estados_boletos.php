@@ -11,17 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('asientos', function (Blueprint $table) {
+        Schema::create('estados_boletos', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo');
-            $table->string('posicion');
-            $table->unsignedBigInteger('clase_id');
-            $table->unsignedBigInteger('avion_id');
+            $table->string('nombre');
+            $table->string('descripcion');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('clase_id')->references('id')->on('clases');
         });
+        //
     }
 
     /**
@@ -29,6 +26,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('asientos');
+        Schema::dropIfExists('estados_boletos');
+
+        //
     }
 };

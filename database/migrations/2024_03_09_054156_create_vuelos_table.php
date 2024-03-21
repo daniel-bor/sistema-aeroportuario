@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('codigo');
             $table->timestamp('fecha_salida');
             $table->timestamp('fecha_llegada');
-            $table->unsignedBigInteger('aerolinea_id');
             $table->unsignedBigInteger('avion_id');
             $table->unsignedBigInteger('tripulacion_id');
             $table->unsignedBigInteger('aeropuerto_origen_id');
@@ -24,7 +23,6 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('aerolinea_id')->references('id')->on('aerolineas');
             $table->foreign('avion_id')->references('id')->on('aviones');
             $table->foreign('tripulacion_id')->references('id')->on('tripulaciones');
             $table->foreign('aeropuerto_origen_id')->references('id')->on('aeropuertos');

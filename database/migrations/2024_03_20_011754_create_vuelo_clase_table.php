@@ -18,6 +18,9 @@ return new class extends Migration
             $table->decimal('precio', 10, 2);
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('clase_id')->references('id')->on('clases');
+            $table->foreign('vuelo_id')->references('id')->on('vuelos');
         });
     }
 
