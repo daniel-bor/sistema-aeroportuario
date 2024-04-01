@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('capacidad_carga', 10, 2);
             $table->decimal('capacidad_pasajeros', 10, 2);
             $table->decimal('capacidad_combustible', 10, 2);
+            $table->decimal('tam_asiento_porc', 10, 2);
             $table->unsignedBigInteger('marca_id');
             $table->unsignedBigInteger('aerolinea_id');
             $table->unsignedBigInteger('modelo_id');
