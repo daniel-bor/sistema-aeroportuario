@@ -22,7 +22,7 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('estado_boleto_id')->references('id')->on('estados_boletos');
+            $table->foreign('estado_boleto_id')->references('id')->on('catalogo');
             $table->foreign('vuelo_id')->references('id')->on('vuelos');
             $table->foreign('asiento_id')->references('id')->on('asientos');
             $table->foreign('cliente_id')->references('id')->on('clientes');

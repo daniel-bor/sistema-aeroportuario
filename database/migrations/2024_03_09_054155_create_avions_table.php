@@ -27,11 +27,11 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('marca_id')->references('id')->on('marcas_avion');
+            $table->foreign('marca_id')->references('id')->on('catalogo');
             $table->foreign('aerolinea_id')->references('id')->on('aerolineas');
-            $table->foreign('modelo_id')->references('id')->on('modelo_aviones');
-            $table->foreign('tipo_id')->references('id')->on('tipo_aviones');
-            $table->foreign('estado_id')->references('id')->on('estado_aviones');
+            $table->foreign('modelo_id')->references('id')->on('catalogo');
+            $table->foreign('tipo_id')->references('id')->on('catalogo');
+            $table->foreign('estado_id')->references('id')->on('catalogo');
         });
     }
 

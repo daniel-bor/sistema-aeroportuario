@@ -27,8 +27,8 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('pais_id')->references('id')->on('paises');
-            $table->foreign('puesto_id')->references('id')->on('puestos');
+            $table->foreign('pais_id')->references('id')->on('catalogo');
+            $table->foreign('puesto_id')->references('id')->on('catalogo');
             $table->foreign('tripulacion_id')->references('id')->on('tripulaciones');
             $table->foreign('aerolinea_id')->references('id')->on('aerolineas');
             $table->foreign('user_id')->references('id')->on('users');

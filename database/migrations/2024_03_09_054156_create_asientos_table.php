@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('clase_id')->references('id')->on('clases');
+            $table->foreign('clase_id')->references('id')->on('catalogo');
         });
     }
 

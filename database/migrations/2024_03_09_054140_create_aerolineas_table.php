@@ -22,7 +22,7 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('pais_id')->references('id')->on('paises');
+            $table->foreign('pais_id')->references('id')->on('catalogo');
         });
     }
 

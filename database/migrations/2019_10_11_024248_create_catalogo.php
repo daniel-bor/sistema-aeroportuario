@@ -11,14 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('estados_boletos', function (Blueprint $table) {
+        Schema::create('catalogo', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->string('descripcion');
             $table->timestamps();
             $table->softDeletes();
+            $table->unsignedBigInteger('catalogo_tipo_id');
+            $table->foreign('catalogo_tipo_id')->references('id')->on('catalogo_tipo');
+
         });
-        //
     }
 
     /**
@@ -26,8 +28,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('estados_boletos');
+        Schema::dropIfExists('catalogo');
 
-        //
     }
 };

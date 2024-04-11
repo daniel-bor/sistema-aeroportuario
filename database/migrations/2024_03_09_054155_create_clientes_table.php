@@ -22,15 +22,14 @@ return new class extends Migration
             $table->string('direccion');
 
             $table->unsignedBigInteger('pais_id');
-            //Campo llamado codigo_telefono relacnionado con la tabla paises
             $table->unsignedBigInteger('codigo_telefono');
             $table->unsignedBigInteger('codigo_telefono_emergencia');
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('pais_id')->references('id')->on('paises');
-            $table->foreign('codigo_telefono')->references('id')->on('paises');
-            $table->foreign('codigo_telefono_emergencia')->references('id')->on('paises');
+            $table->foreign('pais_id')->references('id')->on('catalogo');
+            $table->foreign('codigo_telefono')->references('id')->on('catalogo');
+            $table->foreign('codigo_telefono_emergencia')->references('id')->on('catalogo');
         });
     }
 

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('aerolinea_id');
             $table->timestamps();
 
-            $table->foreign('modelo_avion_id')->references('id')->on('modelo_aviones');
+            $table->foreign('modelo_avion_id')->references('id')->on('catalogo');
             $table->foreign('aerolinea_id')->references('id')->on('aerolineas');
         });
     }
