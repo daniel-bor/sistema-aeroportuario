@@ -24,11 +24,14 @@ return new class extends Migration
             $table->unsignedBigInteger('modelo_id');
             $table->unsignedBigInteger('tipo_id');
             $table->unsignedBigInteger('estado_id');
+            $table->unsignedBigInteger('tripulacion_id');
+
             $table->timestamps();
             $table->softDeletes();
 
             $table->foreign('marca_id')->references('id')->on('catalogo');
             $table->foreign('aerolinea_id')->references('id')->on('aerolineas');
+            $table->foreign('tripulacion_id')->references('id')->on('tripulaciones');
             $table->foreign('modelo_id')->references('id')->on('catalogo');
             $table->foreign('tipo_id')->references('id')->on('catalogo');
             $table->foreign('estado_id')->references('id')->on('catalogo');
