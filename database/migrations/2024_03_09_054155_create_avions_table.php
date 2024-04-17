@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('aviones', function (Blueprint $table) {
             $table->id();
-            $table->date('fecha_ensamble');
             $table->string('serie');
             $table->decimal('capacidad_carga', 10, 2);
             $table->decimal('capacidad_pasajeros', 10, 2);
